@@ -1,6 +1,8 @@
 import { useState } from "react";
 import CreateTableLine from "./component/CreateTableLine";
 import { ShuffleArray } from "./lib/functions";
+import React from "react";
+import { ipcRenderer } from "electron";
 
 export interface Path {
     path: string;
@@ -236,6 +238,7 @@ function App() {
                                     ShuffleArray(randomPath),
                                 ].flat();
                             });
+                            window.preloadApiThing.renderAudio({ output: "file.mp3", paths: path });
                         }}
                     >
                         Thêm vào

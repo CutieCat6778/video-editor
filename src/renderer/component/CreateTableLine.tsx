@@ -1,3 +1,4 @@
+import React from "react";
 import { Path } from "../App";
 
 export default function CreateTableLine({ data, removePath }: { data: Path, removePath: (index: number) => void}) {
